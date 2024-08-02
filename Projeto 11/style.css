@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-text: #34355B;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+h2, p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+#message {
+  background: #E4EDF1;
+  color: #121214;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+#tryAgain {
+  background: #FF9500;
+  color: #fff;
+  
+  padding: 1.6rem;
+  border-radius: .6rem;
+  filter: drop-shadow(0 .7rem 4rem #0000009d);
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  animation: shake .7s ease-in;
+}
+
+img {
+  width: 100%;
+  margin-top: 2.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  width: min(42.8rem,90%);
+}
+
+.screen1, .screen2 {
+  text-align: center;
+
+  border-radius: .6rem;
+  background-color: #fff;
+  filter: drop-shadow(0 .7rem 4rem #0000009d);
+
+  padding: 4.8rem 6.4rem;
+}
+
+
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(2deg) scale(1.05);
+  }
+
+  60% {
+    transform: rotate(-2deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
